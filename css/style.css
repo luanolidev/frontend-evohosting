@@ -1,0 +1,130 @@
+body {
+    background: rgb(5, 5, 5);
+}
+
+.menu-horizontal {
+    background-color: rgb(1, 11, 47);
+    border-radius: 0px 0px 15px 15px;
+    border-bottom: 2px solid #636363;
+}
+
+
+
+.dashboard-infos-user-info {
+    background-color: rgb(8, 5, 21);
+    border-radius: 15px;
+    margin: 0 auto;
+    margin-top: 62px;
+    margin-bottom: 420px;
+    border: 2px solid #636363;
+}
+
+#dashboard-user-avatar {
+    border-radius: 300px;
+    width: 90px;
+    height: 90px;
+    border: 2px solid #bababa;
+    margin-left: 5px;
+}
+
+.dashboard-user-name-infos {
+    color: #8c8a8a;
+    font-weight: 790;
+    margin-left: 105px;
+}
+
+#dashboard-user-name {
+    margin-top: -105px;
+    margin-bottom: 1px;
+}
+
+.dropdown-menu {
+    background: rgb(6, 3, 17);
+    border: 2px solid #575656;
+    border-radius: 15px;
+    color: #fff;
+}
+
+.dashboard-infos-h1 {
+    margin: 0;
+    margin-left: 395px;
+    color: #a0a0a0;
+    font-weight: 570;
+}
+
+/* Pargina dos Planos*/
+.planos-h1-planos {
+    text-align: center;
+    color: #cfcdcd;
+}
+
+.planos {
+    align-items: center;
+    margin-top: 105px;
+    margin-bottom: 160px;
+}
+
+.planos-container {
+    background-color: rgb(19, 19, 19);
+    border: 2px solid rgb(22, 38, 95);
+    border-radius: 15px;
+    color: #fff;
+    height: 380px;
+    width: 300px;
+    margin-bottom: 18px;
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+.plan-h2 {
+    font-weight: 550;
+    text-align: center;
+    color: #cfcdcd;
+}
+
+.description-plan {
+    margin-bottom: -12px;
+    margin-left: 10px;
+    color: rgb(177, 174, 174);
+}
+
+.description-plan:hover {
+    color: rgb(177, 174, 174);
+}
+
+.icon-plan {
+    color: green;
+    font-size: 25px;
+    margin: 0px;
+    margin-bottom: 0px;
+}
+
+.planos-comprar {
+    width: 270px;
+}
+
+/*modal Planos*/
+.modal-content {
+    background: rgb(19, 19, 19);
+    height: 380px;
+    width: 400px;
+    border: 2px solid rgb(22, 38, 95);
+}
+
+.btn-close {
+    background-color: #fff;
+}
+
+.btn-primary {
+    width: 500px;
+}
+
+/* foorter de todas as Parginas*/
+.foorter {
+    background-color: rgb(1, 11, 47);
+    width: 100%;
+    height: 190px;
+    margin-bottom: 0px;
+    border-radius: 15px 15px 0px 0px;
+    border-top: 2px solid #636363;
+}
