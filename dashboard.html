@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="pt-br">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,51 +13,51 @@
 
 <body>
   <div class="dashboard">
-    <div class="dashboard-infos">
-      <div class="dashboard-infos-user">
-        <nav class="menu-horizontal navbar navbar-expand-md navbar-dark">
-          <!-- Logo -->
-          <a href="index.html" class="navbar-brand">
-            <img src="image/logo.png" alt="" width="85">
-          </a>
-          <!-- MenuHamburguer -->
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-target">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <!-- navegacao -->
-          <div class="collapse navbar-collapse" id="nav-target">
-            <ul class="navbar-nav m-auto">
-              <li class="nav-item">
-                <a href="index.html" class="nav-link">Início</a>
-              </li>
-              <li class="nav-item">
-                <a href="" class="nav-link">Documentação</a>
-              </li>
-              <li class="nav-item">
-                <a href="" class="nav-link">Sobre-nós</a>
-              </li>
-              <li class="nav-item">
-                <a href="planos.html" class="nav-link">Planos</a>
-              </li>
-              <li class="nav-item">
-                <a href="" class="nav-link">Dashboard</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a href="" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">Shotzzy<3</a>
-                    <ul class="dropdown-menu">
-                      <li><a href="index.html" class="dropdown-item">Início</a></li>
-                      <li><a href="dashboard.html" class="dropdown-item">Dashboard</a></li>
-                      <li><a href="" class="dropdown-item">Sair</a></li>
-                    </ul>
-              </li>
-          </div>
-          </ul>
+   <div class="dashboard-infos">
+    <div class="dashboard-infos-user">
+     <nav class="menu-horizontal navbar navbar-expand-md navbar-dark">
+      <!-- Logo -->
+       <a href="index.html" class="navbar-brand">
+       <img src="image/logo.png" alt="" width="85">
+       </a>
+       <!-- MenuHamburguer -->
+       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-target">
+         <span class="navbar-toggler-icon"></span>
+       </button>
+       <!-- navegacao -->
+       <div class="collapse navbar-collapse" id="nav-target">
+        <ul class="navbar-nav m-auto">
+         <li class="nav-item">
+           <a href="index.html" class="nav-link">Início</a>
+         </li>
+         <li class="nav-item">
+           <a href="" class="nav-link">Documentação</a>
+         </li>
+         <li class="nav-item">
+           <a href="" class="nav-link">Sobre-nós</a>
+         </li>
+         <li class="nav-item">
+           <a href="planos.html" class="nav-link">Planos</a>
+         </li>
+         <li class="nav-item">
+            <a href="" class="nav-link">Dashboard</a>
+         </li>
+         <li class="nav-item dropdown">
+            <a href="" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">Shotzzy<3</a>
+         <ul class="dropdown-menu">
+         <li><a href="index.html" class="dropdown-item">Início</a></li>
+         <li><a href="dashboard.html" class="dropdown-item">Dashboard</a></li>
+         <li><a href="" class="dropdown-item">Sair</a></li>
+         </ul>
+         </li>
+        </div>
+       </ul>
       </div>
-      </nav>
+     </nav>
       
-      <div class="container-fluid">
-        <div class="row justify-content-center">
-          <div class="col-md-8">
+     <div class="container-fluid">
+       <div class="row justify-content-center">
+        <div class="col-md-8">
             <div class="dashboard-infos-user-info p-3 ">
               <img id="dashboard-user-avatar" class="rounded-full img-fluid mb-3" src="image/avatar.png">
               <div class="dashboard-user-name-infos">
@@ -71,12 +70,32 @@
                 <li><h5 id="dashboard-infos-plan-p">Plano</h5></li>
                 <li><h5 id="dashboard-infos-plan-menu">Expira Em</h5></li>
                 <li><h5 id="dashboard-infos-plan-menu-ram">Ram Ultilizada</h5></li>
+                <button type="button" class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                  Update
+                </button>
               </ul>
             </div>
           </div>
         </div>
       </div>
 
+
+           <!-- Modal -->
+           <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+           aria-labelledby="staticBackdropLabel" aria-hidden="true">
+           <div class="modal-dialog">
+             <div class="modal-content-update">
+               <div class="modal-header">
+                 <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+               </div>
+               <div class="modal-body">
+               Suave
+               </div>
+               <iframe width="500" height="240" src="https://www.youtube.com/embed/rHGqpqSvoYg?si=Hiev3CW_SVV6Wh0I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+             </div>
+           </div>
+         </div>
  
     <p class="">
   <span class=""></span>

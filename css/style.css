@@ -111,12 +111,27 @@ body {
     border: 2px solid rgb(22, 38, 95);
 }
 
+.modal-content-update {
+    background: rgb(19, 19, 19);
+    height: 380px;
+    width: 505px;
+    border: 2px solid rgb(22, 38, 95);
+}
+
 .btn-close {
     background-color: #fff;
 }
 
 .btn-primary {
     width: 500px;
+}
+
+.userinfos-container {
+    background: #0c0c0c;
+    border: 2px solid rgb(22, 38, 95);
+    width: 500px;
+    height: 900px;
+    border-radius: 15px;
 }
 
 /* foorter de todas as Parginas*/
