@@ -9,7 +9,6 @@ body {
 }
 
 
-
 .dashboard-infos-user-info {
     background-color: rgb(8, 5, 21);
     border-radius: 15px;
@@ -19,24 +18,111 @@ body {
     border: 2px solid #636363;
 }
 
-#dashboard-user-avatar {
-    border-radius: 300px;
+/*#dashboard-user-avatar {
+    border-radius: 50%;
+    Updated border-radius for a circle 
     width: 90px;
     height: 90px;
     border: 2px solid #bababa;
     margin-left: 5px;
-}
-
-.dashboard-user-name-infos {
-    color: #8c8a8a;
-    font-weight: 790;
-    margin-left: 105px;
-}
+}*/
 
 #dashboard-user-name {
-    margin-top: -105px;
-    margin-bottom: 1px;
+    margin-bottom: 5px;
+    /* Adjusted margin for better spacing */
 }
+
+.dashboard-infos-plan {
+    list-style: none;
+    /* Removed default list styles */
+    padding: 0;
+    /* Removed default padding */
+    text-align: center;
+    /* Centered text */
+}
+
+.dashboard-infos-plan li {
+    margin-bottom: 10px;
+    /* Adjusted margin for better spacing */
+}
+
+
+
+
+/* Dashboard tamanaho celular mais especifico tamanho do iphone 14*/
+@media (min-width: 390px) {
+    .dashboard-infos-user-info {
+        width: 90%;
+        height: 80%;
+    }
+    #dashboard-user-avatar {
+        height: 75px;
+        width: 75px;
+        border: 2px solid #bababa;
+        border-radius: 20px;
+    }
+}
+
+
+@media (min-width: 576px) {
+    .dashboard-infos-user-info {
+        width: 70%;
+    }
+    #dashboard-user-avatar {
+        height: 100px;
+        width: 100px;
+        border: 2px solid #bababa;
+        border-radius: 15px;
+    }
+}
+
+@media (min-width: 768px) {
+    .dashboard-infos-user-info {
+        width: 70%;
+    }
+    #dashboard-user-avatar {
+        height: 87px;
+        width: 87px;
+        border: 2px solid #bababa;
+        border-radius: 40px;
+    }
+    .dashboard-user-name-infos {
+        margin-top: -80px;
+        margin-left: 62px;
+        color: #cfcdcd;
+        font-weight: 570;
+        list-style: none;
+    }
+    .dashboard-user-name-infos-plano {
+        margin-top: -120px;
+        margin-left: 465px;
+    }
+    .dashboard-user-name-infos-plano-infos {
+        font-size: large;
+        list-style: none;
+    }
+    .dashboard-user-name-infos-acao {
+        margin-top: -125px;
+        margin-left: 825px;
+    }
+}
+
+
+@media (min-width: 1400px) {
+    .dashboard-infos-user-info {
+        width: 90%;
+        height: 50%;
+    }
+}
+
+.dashboard-infos-h1 {
+    margin: 0;
+    color: #a4a1a1;
+    font-weight: 770;
+    text-align: center;
+}
+
+
 
 .dropdown-menu {
     background: rgb(6, 3, 17);
@@ -45,14 +131,6 @@ body {
     color: #fff;
 }
 
-.dashboard-infos-h1 {
-    margin: 0;
-    margin-left: 395px;
-    color: #a0a0a0;
-    font-weight: 570;
-}
-
-/* Pargina dos Planos*/
 .planos-h1-planos {
     text-align: center;
     color: #cfcdcd;
@@ -123,14 +201,35 @@ body {
 }
 
 .btn-primary {
-    width: 500px;
+    width: 110px;
+    background: rgb(22, 38, 95);
+    margin-right: 104px;
+    margin-bottom: 40px;
+
 }
+
+.dashboard-user-name-infos-botoes {
+    list-style: none;
+    
+}
+
+
 
 .userinfos-container {
     background: #0c0c0c;
     border: 2px solid rgb(22, 38, 95);
     width: 500px;
     height: 900px;
+    border-radius: 15px;
+}
+
+.user-update-aplication {
+    height: 450px;
+    width: 870px;
+    background: rgb(19, 19, 19);
+    border: 2px solid rgb(22, 38, 95);
+    margin-top: 163px;
+    margin-bottom: 163px;
     border-radius: 15px;
 }
 
