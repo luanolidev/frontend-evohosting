@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>EvoHosting - Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">    
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">    
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css">
+        <link rel="stylesheet" href="../styles/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a href="index.html"><img id="logo" src="../assets/logo.png"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navegacao">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navegacao">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item"><a href="index.html" class="nav-link" data-translate="navbar_home">Home</a>
+                    </li>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link disabled" data-translate="navbar_plans" aria-disabled="true">Planos</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link disabled" data-translate="navbar_docs" aria-disabled="true">Documentação</a>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link disabled" aria-disabled="true">Downloads</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link disabled" aria-disabled="true">Serviços</a></li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="dropdown-toggle enter-account-discord" role="button"
+                            onclick="loginWithDiscord()" id="discordLoginBtn">Entrar</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" class="dropdown-item">Dashboard</a></li>
+                            <li>
+                                <hr class="dropdown-divide">
+                            </li>
+                            <li><a href="#" class="dropdown-item">Sair</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+        <symbol id="info-fill" viewBox="0 0 16 16">
+            <path
+                d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+        </symbol>
+    </svg>
+    <div class="alert alert-primary d-flex align-items-center" role="alert">
+        <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:">
+            <use xlink:href="#info-fill" />
+        </svg>
+        <div>
+            Site em desenvolvimento. Acesso limitado no momento. Mais funcionalidades em breve.
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="dashbord-space row justify-content-center">
+            <div class="col-12">
+                <div class="dashbord-user">
+                    <img class="dashbord-avatar"
+                        src="https://cdn.discordapp.com/attachments/1153871590824607764/1200280214865977465/logo_com_fundo_Evobots_4000x4000-byfront.png?ex=65d8100f&is=65c59b0f&hm=782b851084eaf4591ec500127aa29c7fc0e5d1491e6030fa259c76204de1ac16&">
+                    <div class="dashbord-infos">
+                        <h4 class="dashbord-name">User</h4>
+                        <span class="dashbord-id">983801040262553682</span><br>
+                        <span class="dashbord-email">support@evohosting.cloud</span>
+                        <ul class="dashboard-plan">
+                            <li class="dashboard-plan-info"><strong data-translate="dashboard_plan_title">Seu plano</strong><br>undefined</li>
+                            <li class="dashboard-plan-info"><strong data-translate="dashboard_plan_expiry">Expira em:</strong><br>undefined</li>
+                            <li class="dashboard-plan-info"><strong data-translate="dashboard_ram_usage">Uso de RAM:</strong><br>undefined</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dashbord-apps">
+                    <h4 class="dashbord-apps-title" data-translate="dashboard_projects_title">Seus Projetos Hospedados</h4>
+                    <ul class="dashboard-apps-busca">
+                        <li><input class="dashboard-apps-buttons" type="button" value="Todos"></li>
+                        <li><input class="dashboard-apps-buttons" type="button" value="Favoritos"></li>
+                        <li><input class="dashboard-apps-buttons" type="button" value="Bots"></li>
+                        <li><input class="dashboard-apps-buttons" type="button" value="Websites"></li>
+                        <li><input class="dashboard-apps-buttons" type="button" value="Mine"></li>
+                        <li><input class="dashboard-apps-buttons" type="button" value="Online"></li>
+                        <li><input class="dashboard-apps-buttons" type="button" value="Offline"></li>
+                    </ul>
+                    <input type="text" placeholder="🔍 Buscar..." class="dashboard-applications-get">
+                    <div class="dashbord-apps-info"></div>
+                    <div class="dashbord-apps-info2"></div>
+                    <div class="dashbord-apps-info3"></div>
+                    <div class="dashbord-apps-info4"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+          <div class="footer-conta">
+            <h2 class="footer-title">MINHA CONTA</h2>
+            <ul class="footer-opcoes">
+              <li><a class="footer-opcoes-c" href="dashboard.html">Painel de Controle</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="footer-title">COMPANHIA</h2>
+            <ul class="footer-opcoes">
+              <li><a class="footer-opcoes-c" href="#">Sobre</a></li>
+              <li><a class="footer-opcoes-c" href="#">Planos</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="footer-title">CENTRO DE AJUDA</h2>
+            <ul class="footer-opcoes">
+              <li><a class="footer-opcoes-c" href="#">Documentação</a></li>
+              <li><a class="footer-opcoes-c" href="#">Como usar a API?</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="footer-title">JURÍDICO</h2>
+            <ul class="footer-opcoes">
+              <li><a class="footer-opcoes-c" href="https://truehosting.mintlify.app/introduction">Termos de Serviço</a>
+              </li>
+              <li><a class="footer-opcoes-c" href="#">Política de Uso</a></li>
+            </ul>
+          </div>
+        </div>
+      </footer> 
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        window.$crisp = [];
+        window.CRISP_WEBSITE_ID = "8accd311-3625-472a-97cd-54e41fbf0424";
+        (function () {
+            d = document;
+            s = d.createElement("script");
+            s.src = "https://client.crisp.chat/l.js";
+            s.async = 1;
+            d.getElementsByTagName("head")[0].appendChild(s);
+        })();
+    </script>
+      <script src="src/system/accontlogin.js"></script>
+</body>
+
+</html>
