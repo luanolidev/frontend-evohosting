@@ -2,19 +2,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alkatra:wght@500&display=swap');
 
+@font-face {
+    font-family: 'NotoSans';
+    src: url('./notosans-400-normalitalic.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
 body {
     background: rgb(7, 8, 8);
     margin: 0px;
     padding: 0px;
     color: #FFF;
     font-family: 'Roboto', sans-serif;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    overflow: hidden;
 }
 
 body::after {
@@ -27,6 +27,9 @@ body::after {
     height: 100%;
     background: radial-gradient(circle, rgba(0, 0, 0, 0.1825105042016807) 0%, rgba(35, 38, 53, 0.8) 100%);
 }
+
+
+
 
 h3 {
     margin: 0;
@@ -93,10 +96,9 @@ h3 {
     background-color: rgb(20, 56, 131);
 }
 
-
 .index-dashbord {
     margin-left: 45%;
-    margin-bottom: 16.50%;
+    margin-bottom: 16%;
     background: rgb(5, 41, 89);
     width: 150px;
     height: 45px;
@@ -266,12 +268,11 @@ h3 {
 .footer-content {
     display: flex;
     height: 200px;
-    margin-top: -4px;
     background-color: rgba(6, 112, 233, 0.554);
 }
 
 .footer-conta {
-    margin-left: 30%;
+   margin-left: 32%;
 }
 
 .footer-title {
@@ -350,4 +351,77 @@ h3 {
     text-align: center;
     margin-top: 0px;
     font-size: 20px;
+}
+
+.plans-container-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 9%;
+    margin-bottom: 11%;
+}
+
+.plans-container {
+    background: #1d1c1c90;
+    height: 380px;
+    width: 320px;
+    border-radius: 15px;
+}
+
+.plans-ul {
+    list-style: none;
+}
+
+.plans-li-t {
+    margin-top: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 250px;
+    border-radius: 7px;
+    text-align: center;
+}
+
+#plans-mercury {
+    color: #ffd700;
+}
+#plans-venus {
+    color: #32cd32;
+}
+#plans-mars {
+    color: #ff4500;
+}
+#plans-jupiter {
+    color: #8c12e7;
+}
+#plans-saturn {
+    color: #e27527;
+}
+
+.plans-li {
+    color: #d6d3d3;
+    font-weight: 570;
+    margin-bottom: -12px;
+
+}
+
+.bi-check {
+    color: #256e03;
+    font-size: 30px;
+}
+
+#plan-bravery {
+    width: 250px;
+    border-radius: 5px;
+    margin-top: 5px;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 22px;
+}
+
+.plans-li-button {
+    width: 250px;
+    height: 40px;
+    background: #2c8304b5;
+    color: #fff;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: none;
 }
