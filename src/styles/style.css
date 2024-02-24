@@ -353,25 +353,40 @@ h3 {
     font-size: 20px;
 }
 
+.container-plans {
+    margin-top: 5%;
+    background: rgb(21, 21, 21);
+    height: 90px;
+    width: 105em;
+    border-radius: 12px;
+    margin-left: 5%;
+    box-shadow: 0 0 20px rgba(37, 100, 235, 0.561); 
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 #plans {
-    margin-top: 4%;
     color: #114cac;
     text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 .plans-container-wrapper {
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 3%;
-    margin-bottom: 10.50%;
+    display: flex; 
+    margin-left: 5%;
+    margin-top: 2%;
+    margin-bottom: 8.20%;
 }
 
 .plans-container {
-    background: #1d1c1c90;
+    background: rgba(25, 25, 25, 0.745);
     height: 380px;
     width: 320px;
     border-radius: 15px;
+    margin-right: 20px;
+    box-shadow: 0 0 17px rgba(37, 100, 235, 0.561); 
 }
 
 .plans-ul {
