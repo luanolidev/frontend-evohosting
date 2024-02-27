@@ -1,34 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' https://cdn.jsdelivr.net 'unsafe-inline';">
-    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
-
-    <title>EvoHosting - Dashboard</title>
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>EvoHosting - Dashboard</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
-    <!-- Font Awesome CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome Pro -->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-
-    <!-- Custom Styles -->
-    <link rel="stylesheet" href="../styles/style.css">
-
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-</head>
+        <link rel="stylesheet" href="../styles/style.css">
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+      </head>
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark">
@@ -81,11 +62,12 @@
             <div class="col-12">
                 <div class="dashbord-user">
                     <img class="dashbord-avatar"
-                        src="https://cdn.discordapp.com/attachments/1153871590824607764/1200280214865977465/logo_com_fundo_Evobots_4000x4000-byfront.png?ex=65d8100f&is=65c59b0f&hm=782b851084eaf4591ec500127aa29c7fc0e5d1491e6030fa259c76204de1ac16&">
+                        src="https://cdn.discordapp.com/avatars/983801040262553682/a_72449d8f23229744c8fbd8d1091e5668.png">
                     <div class="dashbord-infos">
-                        <h4 class="dashbord-name">User</h4>
-                        <span class="dashbord-id">983801040262553682</span><br>
-                        <span class="dashbord-email">support@evohosting.cloud</span>
+                        <h4 class="dashbord-name">Shotzzy3</h4>
+                        <span class="dashbord-id">ID: 983801040262553682</span><br>
+                        <span class="dashbord-email">Email: support@evohosting.cloud</span>
+
                         <ul class="dashboard-plan">
                             <li class="dashboard-plan-info"><strong data-translate="dashboard_plan_title">Seu plano</strong><br>undefined</li>
                             <li class="dashboard-plan-info"><strong data-translate="dashboard_plan_expiry">Expira em:</strong><br>undefined</li>
@@ -106,10 +88,12 @@
                     </ul>
                     <input type="text" id="nomeUsuario" class="dashboard-applications-get" name="nomeUsuario" autocomplete="username"  placeholder="🔍 Buscar...">
 
-                    <div class="dashbord-apps-info"></div>
-                    <div class="dashbord-apps-info2"></div>
-                    <div class="dashbord-apps-info3"></div>
-                    <div class="dashbord-apps-info4"></div>
+                    <ul id="list-apps">
+                        <li class="dashbord-apps-info"></li>
+                        <li class="dashbord-apps-info"></li>
+                        <li class="dashbord-apps-info"></li>
+                        <li class="dashbord-apps-info"></li>
+                    </ul>   
                 </div>
             </div>
         </div>
@@ -148,75 +132,34 @@
         </div>
       </footer> 
 
-
-     
       <script>
         window.onload = () => {
           const fragment = new URLSearchParams(window.location.hash.slice(1));
           const [accessToken, tokenType] = [fragment.get('access_token'), fragment.get('token_type')];
-      
           if (!accessToken) {
               window.location.href('/')
           }
-      
           fetch('https://discord.com/api/users/@me', {
           headers: {
               authorization: `${tokenType} ${accessToken}`,
-          },
-          })
+          }})
           .then(result => result.json())
           .then(response => {
               console.log(response);
               const { username, discriminator, avatar, id} = response;
-              //set the welcome username string
               document.getElementsByClassName('dashbord-name').innerText = ` ${username}#${discriminator}`;
       
-              //set the avatar image by constructing a url to access discord's cdn
               document.getElementById("dashbord-avatar").src = `https://cdn.discordapp.com/avatars/${id}/${avatar}.jpg`;
           })
           .catch(console.error);
-      
-      
       };
       </script>
-
-
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
 
-      <script type="text/javascript">
-        // Função para atualizar as informações do usuário na página
-        function updateUserInfo(name, id, email, avatarUrl) {
-            console.log("Updating user info:", name, id, email, avatarUrl);
-    
-            // Atualize os elementos HTML com as novas informações
-            document.getElementsByClassName('.dashbord-name').innerText = name;
-            document.getElementsByClassName('.dashbord-id').innerText = id;
-            document.getElementsByClassName('.dashbord-email').innerText = email;
-    
-            // Atualize a imagem do avatar
-            document.getElementsByClassName('.dashbord-avatar').src = avatarUrl;
-        }
-    
-        // Verifique se há parâmetros de consulta na URL (após o login)
-        const urlParams = new URLSearchParams(window.location.search);
-        if (urlParams.has('name') && urlParams.has('id') && urlParams.has('email') && urlParams.has('avatarUrl')) {
-            const name = urlParams.get('name');
-            const id = urlParams.get('id');
-            const email = urlParams.get('email');
-            const avatarUrl = urlParams.get('avatarUrl');
-            updateUserInfo(name, id, email, avatarUrl);
-        } else {
-            console.error('User info parameters are missing from the URL.');
-        }
-    </script>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
     <script type="text/javascript">
         window.$crisp = [];
         window.CRISP_WEBSITE_ID = "8accd311-3625-472a-97cd-54e41fbf0424";
@@ -229,5 +172,4 @@
         })();
     </script>
 </body>
-
 </html>
