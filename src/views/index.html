@@ -4,37 +4,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>EvoHosting - Dashboard</title>
+  <title>EvoHosting - Home</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-  integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="stylesheet" href="../assets/css/style.css">
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
+
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark">
-  <div class="container-fluid">
-    <a href="index.html"><img id="logo" src="../assets/img/logo.png"></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navegacao">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navegacao">
-      <ul class="navbar-nav mb-2 mb-lg-0">
-        <li class="nav-item"><a href="index.html" class="nav-link" data-translate="navbar_home">Home</a></li>
-        <li class="nav-item"><a href="plan.html" class="nav-link"  data-translate="navbar_plans">Planos</a></li>
-        <li class="nav-item"><a href="#" class="nav-link disabled" data-translate="navbar_docs"
-            aria-disabled="true">Documentação</a>
-        </li>
-        <li class="nav-item"><a href="#" class="nav-link disabled" aria-disabled="true">Downloads</a></li>
-        <li class="nav-item"><a href="#" class="nav-link disabled" aria-disabled="true">Serviços</a></li>
-        <li class="nav-item dropdown">
-          <a href="http://localhost:3000/auth/login" class="enter-account-discord" role="button" id="discordLoginBtn">Entrar</a>
-      </li>        
-      </ul>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <a href="index.html"><img id="logo" src="../assets/img/logo.png"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navegacao">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navegacao">
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item"><a href="index.html" class="nav-link" data-translate="navbar_home">Home</a></li>
+          <li class="nav-item"><a href="plan.html" class="nav-link" data-translate="navbar_plans">Planos</a></li>
+          <li class="nav-item"><a href="#" class="nav-link disabled" data-translate="navbar_docs"
+              aria-disabled="true">Documentação</a>
+          </li>
+          <li class="nav-item"><a href="#" class="nav-link disabled" aria-disabled="true">Downloads</a></li>
+          <li class="nav-item"><a href="#" class="nav-link disabled" aria-disabled="true">Serviços</a></li>
+          <li class="nav-item dropdown">
+            <a href="http://localhost:3000/auth/login" class="enter-account-discord" role="button"
+              id="discordLoginBtn">Entrar</a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
   <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
     <symbol id="info-fill" viewBox="0 0 16 16">
@@ -58,59 +60,66 @@
       Utilize sua linguagem favorita, como Rust e outras opções poderosas!
     </p>
 
-    <button class="index-dashbord">
+<div class="container-index-d">
+  <li id="index-dashbord">
+    <button class="butoon-dashbord">
+      <samp><a href="dashboard.html" style="text-decoration: none;">Termos</a></samp>
+    </button>
+    <button class="button-terms">
       <samp><a href="dashboard.html" style="text-decoration: none;">Dashbord</a></samp>
     </button>
-
+  </li>
+</div>
+  
     <div id="user-info" style="display: none;">
       <img id="user-avatar" src="" class="rounded-full w-12 h-12 mr-3">
       <span id="user-name"></span>
     </div>
 
-    <footer>
-      <div class="footer-content">
-        <div class="footer-conta">
-          <h2 class="footer-title">MINHA CONTA</h2>
-          <ul class="footer-opcoes">
-            <li><a class="footer-opcoes-c" href="dashboard.html">Painel de Controle</a></li>
-          </ul>
-        </div>
-        <div>
-          <h2 class="footer-title">COMPANHIA</h2>
-          <ul class="footer-opcoes">
-            <li><a class="footer-opcoes-c" href="">Sobre</a></li>
-            <li><a class="footer-opcoes-c" href="plans.html">Planos</a></li>
-          </ul>
-        </div>
-        <div>
-          <h2 class="footer-title">CENTRO DE AJUDA</h2>
-          <ul class="footer-opcoes">
-            <li><a class="footer-opcoes-c" href="">Documentação</a></li>
-            <li><a class="footer-opcoes-c" href="documentation.html">Como usar a API?</a></li>
-          </ul>
-        </div>
-        <div>
-          <h2 class="footer-title">JURÍDICO</h2>
-          <ul class="footer-opcoes">
-            <li><a class="footer-opcoes-c" href="https://truehosting.mintlify.app/introduction">Termos de Serviço</a>
-            </li>
-            <li><a class="footer-opcoes-c" href="">Política de Uso</a></li>
-          </ul>
-        </div>
+    <footer class="footer">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-3">
+                  <div class="footer-conta">
+                      <h2 class="footer-title">MINHA CONTA</h2>
+                      <ul class="footer-opcoes">
+                          <li><a class="footer-opcoes-c" href="dashboard.html">Painel de Controle</a></li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="col-md-3">
+                  <div class="footer-conta">
+                      <h2 class="footer-title">COMPANHIA</h2>
+                      <ul class="footer-opcoes">
+                          <li><a class="footer-opcoes-c" href="">Sobre</a></li>
+                          <li><a class="footer-opcoes-c" href="plans.html">Planos</a></li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="col-md-3">
+                  <div class="footer-conta">
+                      <h2 class="footer-title">CENTRO DE AJUDA</h2>
+                      <ul class="footer-opcoes">
+                          <li><a class="footer-opcoes-c" href="">Documentação</a></li>
+                          <li><a class="footer-opcoes-c" href="documentation.html">Como usar a API?</a></li>
+                      </ul>
+                  </div>
+              </div>
+              <div class="col-md-3">
+                  <div class="footer-conta">
+                      <h2 class="footer-title">JURÍDICO</h2>
+                      <ul class="footer-opcoes">
+                          <li><a class="footer-opcoes-c" href="https://truehosting.mintlify.app/introduction">Termos de Serviço</a></li>
+                          <li><a class="footer-opcoes-c" href="">Política de Uso</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
       </div>
-    </footer>
+  </footer>
 
-    <script type="text/javascript">
-      window.$crisp = [];
-      window.CRISP_WEBSITE_ID = "8accd311-3625-472a-97cd-54e41fbf0424";
-      (function () {
-        d = document;
-        s = d.createElement("script");
-        s.src = "https://client.crisp.chat/l.js";
-        s.async = 1;
-        d.getElementsByTagName("head")[0].appendChild(s);
-      })();
-    </script>
+    <script
+      type="text/javascript">window.$crisp = []; window.CRISP_WEBSITE_ID = "44370ab1-02fc-4a1a-afeb-80acd10071f7"; (function () { d = document; s = d.createElement("script"); s.src = "https://client.crisp.chat/l.js"; s.async = 1; d.getElementsByTagName("head")[0].appendChild(s); })();</script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"></script>
