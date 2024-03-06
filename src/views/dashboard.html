@@ -61,17 +61,22 @@
         <div class="dashbord-space row justify-content-center">
             <div class="col-12">
                 <div class="dashbord-user">
-                    <img class="dashbord-avatar" src="https://cdn.discordapp.com/avatars/983801040262553682/a_72449d8f23229744c8fbd8d1091e5668.png">
+                    <img class="dashbord-avatar" src="https://cdn.discordapp.com/attachments/1153871590824607764/1214953589328584755/discord-icon-2048x2048-wooh9l0j.png?ex=65fafcb4&is=65e887b4&hm=5cdc1c01cc38cd8c461a325e081877549ed05055562932b56bdd196e0849cbcd&">
                     <div class="dashbord-infos">
-                        <h4 class="dashbord-name">Shotzzy3</h4>
-                        <span class="dashbord-id">ID: 983801040262553682</span><br>
-                        <span class="dashbord-email">Email: support@evohosting.cloud</span>
-    
-                        <ul class="dashboard-plan">
-                            <li class="dashboard-plan-info"><strong data-translate="dashboard_plan_title">Seu plano</strong><br>undefined</li>
-                            <li class="dashboard-plan-info"><strong data-translate="dashboard_plan_expiry">Expira em:</strong><br>undefined</li>
-                            <li class="dashboard-plan-info"><strong data-translate="dashboard_ram_usage">Uso de RAM:</strong><br>undefined</li>
-                        </ul>
+                        <div class="info-item" id="user-discord">
+                            <h4 class="dashbord-name">Carregando...</h4>
+                            <span class="dashbord-id">ID: Carregando...</span>
+                            <span class="dashbord-email">Email: Carregando...</span>
+                        </div>
+                        <div class="info-item">
+                            <strong id="dashboardplantitle">Seu plano</strong><br>Carregando...
+                        </div>
+                        <div class="info-item">
+                            <strong id="dashboard_plan_expiry">Expira em:</strong><br>Carregando...
+                        </div>
+                        <div class="info-item">
+                            <strong did="dashboard_ram_usage">Uso de RAM:</strong><br>Carregando...
+                        </div>
                     </div>
                 </div>
                 <div class="dashboard-apps">
@@ -155,10 +160,14 @@
           .then(result => result.json())
           .then(response => {
               console.log(response);
-              const { username, discriminator, avatar, id} = response;
-              document.getElementsByClassName('dashbord-name').innerText = ` ${username}#${discriminator}`;
-      
-              document.getElementById("dashbord-avatar").src = `https://cdn.discordapp.com/avatars/${id}/${avatar}.jpg`;
+              const { username, discriminator, avatar, id, email, plano} = response;
+
+              document.querySelector(".dashbord-name").innerText = `${username}`;
+              document.querySelector(".dashbord-id").innerText = `ID: ${id}`;
+              document.querySelector(".dashbord-email").innerText = `Email: ${email}`;
+              document.querySelector(".dashbord-avatar").src = `https://cdn.discordapp.com/avatars/${id}/${avatar}.jpg`;
+
+              document.getElementById("dashboardplantitle").innerText = `${plano.name}`;
           })
           .catch(console.error);
       };

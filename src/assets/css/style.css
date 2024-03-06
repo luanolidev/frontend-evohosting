@@ -158,8 +158,19 @@ h3 {
     border-radius: 20px 20px 20px 20px;
     color: rgb(235, 235, 235);
     box-shadow: 0 0 5px rgba(37, 100, 235, 0.561);
-    height: 115px;
+    height: auto;
     margin-bottom: 2%;
+    padding: 10px; 
+}
+
+#user-discord {
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .dashbord-user {
+        height: auto;
+    }
 }
 
 .dashbord-apps {
@@ -176,13 +187,41 @@ h3 {
     margin-top: 0.60%;
     margin-left: 1%;
     border-radius: 900px;
+    border: 3px solid rgba(182, 181, 181, 0.859);
 }
 
 .dashbord-infos {
     margin-top: -7%;
     margin-left: 8.50%;
-    font-size: larger;
+    font-size: medium;
     font-weight: 570;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    position: relative;
+}
+
+.info-item {
+    margin-bottom: 5px;
+    flex-basis: calc(30% - 200px);
+    max-width: 300px; 
+}
+
+.info-item h4,
+.info-item span {
+    display: block; 
+}
+
+@media (max-width: 768px) {
+    .dashbord-user {
+        flex-direction: column; 
+    }
+
+    .info-item {
+        margin-bottom: 0.5em; 
+        max-width: none; 
+        flex-basis: auto; 
+    }
 }
 
 .dashbord-name {
@@ -262,7 +301,6 @@ h3 {
         margin-right: 0;
     }
 }
-
 
 #logo {
     width: 90px;
